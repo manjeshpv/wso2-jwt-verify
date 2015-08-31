@@ -1,0 +1,25 @@
+{
+  "name": "wso2-jwt-verify",
+  "version": "0.0.2",
+  "description": "jwt.verify() not working for me when token signed WSO2 API Gateway JWT(Java)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manjeshpv/wso2-jwt-verify.git"
+  },
+  "keywords": [
+    "WSO2",
+    "JWT",
+    "Signature",
+    "Verify"
+  ],
+  "author": "Manjesh V <manjeshpv@gmail.com> (http://manjeshpv.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manjeshpv/wso2-jwt-verify/issues"
+  },
+  "homepage": "https://github.com/manjeshpv/wso2-jwt-verify#readme"
+}
