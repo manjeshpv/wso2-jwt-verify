@@ -4,6 +4,13 @@
 
 jsonwebtoken jwt.verify() not worked for me.
 
+Downloaded /repository/resources/security/wso2carbon.jks from WSO2 Installation Server
+
+Opened Using http://sourceforge.net/projects/keystore-explorer/
+
+In list of keys, Right clicked on wso2corbon & Export > Public Key > OpenSSL > Named "public.key"
+
+
 ## Installation
 
 ```sh
