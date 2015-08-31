@@ -1,8 +1,12 @@
 # wso2-jwt-verify
 
 ### Express Middleware for Verify JWT Signature
+Signed with WSO3 SHA256withRSA wso2carbok Private Key
 
 jsonwebtoken jwt.verify() not worked for me.
+
+Enabled JWT in WSO2 Using : https://docs.wso2.com/display/AM190/Passing+Enduser+Attributes+to+the+Backend+Using+JWT
+#####<SignatureAlgorithm>SHA256WITHRSA<SignatureAlgorithm/>
 
 Downloaded /repository/resources/security/wso2carbon.jks from WSO2 Installation Server
 
