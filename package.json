@@ -1,6 +1,6 @@
 {
   "name": "wso2-jwt-verify",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "jwt.verify() not working for me when token signed WSO2 API Gateway JWT(Java)",
   "main": "index.js",
   "scripts": {
