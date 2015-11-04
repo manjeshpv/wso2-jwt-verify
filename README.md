@@ -13,7 +13,20 @@ Downloaded /repository/resources/security/wso2carbon.jks from WSO2 Installation 
 Opened Using http://sourceforge.net/projects/keystore-explorer/
 
 In list of keys, Right clicked on wso2corbon & Export > Public Key > OpenSSL > Named "public.key"
+![WSO2 Implementation](https://docs.google.com/drawings/d/1ahRrSj9XxgxqnPcwVL8Mm_RMtHqAkQdXuZqMabxmZjA/pub?w=960&amp;h=720)
 
+* 1. Sending request to WSO2 API Gateway 
+```sh
+curl -k -d "grant_type=password&username=<USER>&password=<PASSWORD>" -H "Authorization: Basic ZjA0N1BNMGhkVVdrRE9wVjdxbjdsYjJmOWtvYTo2RGtmdGpib1Z6aVFNUE11Y1VRMUZCTzVrRFlh, Content-Type: application/x-www-form-urlencoded" https://api.wso2server.com:8243/token
+```
+* 2. Response from OAuth2 Server with JWT Reference Token(not having jwt-assertion) & I think stores original JWT signed using Private key (wso2carbon inside wso2carbon.jks - explore using keystore exploree)
+* 3. Requesting Resource with JWT 
+```sh
+curl -X GET --header "Accept: application/json" --header "Authorization: Bearer 7dd37d727a74215316f4c873ccf6378e" "https://api.wso2server.com:8243/resource/1.0.0/"
+```
+* 4. API Gateway adds jwt-assertion(JWT By Value Token haveing header.body.signature format) & forwards request resource server.
+* 5. Resource Server verifies SHA256withRSA signature using public key taken from keystore explorer. And Sends Resources if JWT Signature is valid.
+* 6. API Manager  forwards resource/s to Client
 
 ## Installation
 
